@@ -108,23 +108,30 @@ class LinkedList(object):
                 self.count -= 1
 
 
-    def printLinkedListInReverse(self):
+    def LinkedListInReverse(self):
+        pass
+
+    def reverseLinkedList(self):
         if self.count == 0:
             print('The list is empty')
         elif self.count == 1:
-            print(self.head.getData())
+            return None
         else:
-
-
-    def reverseLinkedList(self):
-
+            current = self.head
+            previous = None
+            while current != None:
+                next = current.getNext()
+                current.setNext(previous)
+                previous = current
+                current = next
+            self.head = previous
 
     def printAllNode(self):
         current = self.head
-        while current.next != None:
+        while current != None:
             print(current.getData())
             current = current.getNext()
-        print(current.getData())
+
 
     def getCount(self):
         return self.count
@@ -149,3 +156,6 @@ print('')
 newLinkedList.deleteNodeAtPosition(3)
 newLinkedList.printAllNode()
 
+newLinkedList.reverseLinkedList()
+print('')
+newLinkedList.printAllNode()
