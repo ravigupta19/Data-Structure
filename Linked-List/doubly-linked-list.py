@@ -126,7 +126,18 @@ class DoubleLinkedList(object):
 
 
     def reverseDoubleLinkedList(self):
-        pass
+        if self.count == 0:
+            return
+        else:
+            current = self.head
+            while current != None:
+                previous = current.getPrevious()
+                next = current.getNext()
+                current.setPrevious(next)
+                current.setNext(previous)
+                previous = current
+                current = next
+            self.head = previous
 
     def printAllNode(self):
         current = self.head
@@ -153,4 +164,6 @@ d.printAllNode()
 d.deleteNodeAtStart()
 d.deleteNodeAtEnd()
 d.deleteNodeAtPosition(2)
+d.printAllNode()
+d.reverseDoubleLinkedList()
 d.printAllNode()
