@@ -35,7 +35,7 @@ class DoubleLinkedList(object):
             self.head = new_node
         else:
             current = self.head
-            while current.getNext() != None:
+            while current.getNext() is not None:
                 current = current.getNext()
             current.setNext(new_node)
             new_node.setPrevious(current)
@@ -96,7 +96,7 @@ class DoubleLinkedList(object):
             print('List is empty')
         else:
             current = self.head
-            while current.getNext() != None:
+            while current.getNext() is not None:
                 current = current.getNext()
             previous = current.getPrevious()
             current.setPrevious(None)
@@ -130,7 +130,7 @@ class DoubleLinkedList(object):
             return
         else:
             current = self.head
-            while current != None:
+            while current is not None:
                 previous = current.getPrevious()
                 next = current.getNext()
                 current.setPrevious(next)
@@ -152,6 +152,12 @@ class DoubleLinkedList(object):
 
     def getCount(self):
         return self.count
+
+    def PrintReverse(self, head):
+        if head is None:
+            return
+        self.PrintReverse(head.next)
+        print(head.data)
 
 d = DoubleLinkedList()
 d.addNodeAtEnd(12)

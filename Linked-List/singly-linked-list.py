@@ -28,7 +28,7 @@ class LinkedList(object):
     def addNodeAtEnd(self, data):
         newNode = Node()
         newNode.setData(data)
-        if self.head == None:
+        if self.head is None:
             self.head = newNode
         else:
             current = self.head
@@ -40,7 +40,7 @@ class LinkedList(object):
     def addNodeAtStart(self,data):
         newNode = Node()
         newNode.setData(data)
-        if self.head == None:
+        if self.head is None:
             self.head = newNode
         else:
             newNode.setNext(self.head)
@@ -80,7 +80,7 @@ class LinkedList(object):
         else:
             currentNode = self.head
             previousNode = self.head
-            while currentNode.next != None:
+            while currentNode.next is not None:
                 previousNode = currentNode
                 currentNode = currentNode.getNext()
             currentNode.setNext(None)
@@ -119,7 +119,7 @@ class LinkedList(object):
         else:
             current = self.head
             previous = None
-            while current != None:
+            while current is not None:
                 next = current.getNext()
                 current.setNext(previous)
                 previous = current
@@ -128,13 +128,41 @@ class LinkedList(object):
 
     def printAllNode(self):
         current = self.head
-        while current != None:
+        while current is not None:
             print(current.getData())
             current = current.getNext()
 
 
     def getCount(self):
         return self.count
+
+    def PrintReverse(self, head):
+        if head is None:
+            return
+        self.PrintReverse(head.next)
+        print(head.data)
+
+    def reverse(self, p):
+        if p.next is None:
+            self.head = p
+            return
+        self.reverse(p.next)
+        next_node = p.next
+        next_node.next = p
+        p.next = None
+
+    def RemoveDuplicates(self):
+        head = self.head
+        if head is None:
+            return
+        current = head
+        while current.next is not None:
+            next = current.next
+            if current.data == next.data:
+                temp = next.next
+                current.next = temp
+                current = current.next
+        return head
 
 newLinkedList = LinkedList()
 newLinkedList.addNodeAtEnd(4)
