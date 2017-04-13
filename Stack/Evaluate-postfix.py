@@ -29,6 +29,19 @@ class Evaluate(object):
                 self.push(data)
         print(self.getTop())
 
+    def evaluatePrefix(self,expression):
+        for char in expression[::-1]:
+            try:
+                data = int(char)
+            except ValueError:
+                oper1 = self.pop()
+                oper2 = self.pop()
+                res = self.evaluateExpression(char, oper1, oper2)
+                self.push(res)
+            else:
+                self.push(data)
+        print(self.getTop())
+
     def evaluateExpression(self,operand, operator1, operator2):
         if operand == '*':
             return operator1 * operator2
@@ -44,3 +57,4 @@ class Evaluate(object):
 
 evalexper = Evaluate()
 evalexper.evaluatePostfix('23*54*+9-')
+evalexper.evaluatePrefix('-+*23*549')
