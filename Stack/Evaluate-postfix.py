@@ -52,6 +52,9 @@ class Evaluate(object):
         elif operand == '-':
             return operator1 - operator2
 
+    def infixtopostfix(self,expression):
+        pass
+
     def getTop(self):
         return self.top
 
