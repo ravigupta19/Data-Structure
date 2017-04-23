@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18ff901a-3fb4-4efc-94a7-529e1de2a4bf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="18ff901a-3fb4-4efc-94a7-529e1de2a4bf" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,26 +12,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="stack-array.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stack/stack-array.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="19" lean-forward="false" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stack-linked-list.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stack/stack-linked-list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="71" column="15" lean-forward="false" selection-start-line="71" selection-start-column="15" selection-end-line="71" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="reverse-string-stack.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Stack/reverse-string-stack.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,11 +62,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heap.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="heap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Heap/heap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="562">
               <caret line="75" column="15" lean-forward="true" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="binary-search-tree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Trees/binary-search-tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Binary-Tree.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Trees/Binary-Tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -141,6 +139,8 @@
         <option value="$PROJECT_DIR$/Queue/queue-using-Linkedlist.py" />
         <option value="$PROJECT_DIR$/Queue/prority-queue.py" />
         <option value="$PROJECT_DIR$/Heap/heap.py" />
+        <option value="$PROJECT_DIR$/Trees/binary-search-tree.py" />
+        <option value="$PROJECT_DIR$/Trees/Binary-Tree.py" />
       </list>
     </option>
   </component>
@@ -196,6 +196,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DataStructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Trees" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,6 +259,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -276,7 +290,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.heap">
+  <component name="RunManager" selected="Python.Binary-Tree">
     <configuration default="false" name="balanced-parentheses" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -290,24 +304,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DataStructure" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stack/balanced-parentheses.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Evaluate-postfix" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Stack" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataStructure" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stack/Evaluate-postfix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -362,6 +358,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DataStructure" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Heap/heap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Binary-Tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Trees" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataStructure" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Trees/Binary-Tree.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -433,18 +447,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.balanced-parentheses" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Evaluate-postfix" />
-      <item index="2" class="java.lang.String" itemvalue="Python.queue-using-list" />
-      <item index="3" class="java.lang.String" itemvalue="Python.queue-using-Linkedlist" />
-      <item index="4" class="java.lang.String" itemvalue="Python.heap" />
+      <item index="1" class="java.lang.String" itemvalue="Python.queue-using-list" />
+      <item index="2" class="java.lang.String" itemvalue="Python.queue-using-Linkedlist" />
+      <item index="3" class="java.lang.String" itemvalue="Python.heap" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Binary-Tree" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.heap" />
-        <item index="1" class="java.lang.String" itemvalue="Python.queue-using-Linkedlist" />
-        <item index="2" class="java.lang.String" itemvalue="Python.queue-using-list" />
-        <item index="3" class="java.lang.String" itemvalue="Python.balanced-parentheses" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Evaluate-postfix" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Binary-Tree" />
+        <item index="1" class="java.lang.String" itemvalue="Python.heap" />
+        <item index="2" class="java.lang.String" itemvalue="Python.queue-using-Linkedlist" />
+        <item index="3" class="java.lang.String" itemvalue="Python.queue-using-list" />
+        <item index="4" class="java.lang.String" itemvalue="Python.balanced-parentheses" />
       </list>
     </recent_temporary>
   </component>
@@ -502,20 +516,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Linked-List/singly-linked-list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="160" column="41" lean-forward="false" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Linked-List/doubly-linked-list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="133" column="48" lean-forward="false" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Stack/stack-array.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -584,6 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -591,6 +592,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="133" column="48" lean-forward="false" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -662,6 +664,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
           <caret line="160" column="41" lean-forward="false" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -669,6 +672,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="133" column="48" lean-forward="false" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -724,6 +728,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
           <caret line="160" column="41" lean-forward="false" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -731,6 +736,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="133" column="48" lean-forward="true" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -786,6 +792,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -793,6 +800,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2250">
           <caret line="150" column="39" lean-forward="true" selection-start-line="141" selection-start-column="4" selection-end-line="150" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -808,6 +816,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
           <caret line="160" column="41" lean-forward="false" selection-start-line="160" selection-start-column="41" selection-end-line="160" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,6 +824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="133" column="48" lean-forward="false" selection-start-line="133" selection-start-column="48" selection-end-line="133" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -892,8 +902,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Heap/heap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="562">
           <caret line="75" column="15" lean-forward="true" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trees/binary-search-tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trees/Binary-Tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding />
         </state>
       </provider>
