@@ -21,7 +21,7 @@ class Stack(object):
         return self.stk.pop()
 
     def isEmpty(self):
-        return len(self.stk) == 0
+        return self.stk == []
 
     def display(self):
         if self.isEmpty():

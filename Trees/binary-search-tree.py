@@ -26,20 +26,24 @@ class BinarySearchTree(object):
         new_node = BinaryNode(data)
         return new_node
 
-    def insertNode(self,root,node):
-        if root is None:
+    def insert(self, data):
+        node = BinaryNode(data)
+        if self.root is None:
             self.root = node
         else:
-            if node.data <= root.data:
-                if root.left is None:
-                    root.left = node
-                else:
-                    self.insertNode(root.left,node)
-            elif node.data > root.data:
-                if root.right is None:
-                    root.right = node
-                else:
-                    self.insertNode(root.right, node)
+            self.insertNode(self, self.root, node)
+
+    def insertNode(self, root, node):
+        if node.data <= root.data:
+            if root.left is None:
+                root.left = node
+            else:
+                self.insertNode(root.left,node)
+        elif node.data > root.data:
+            if root.right is None:
+                root.right = node
+            else:
+                self.insertNode(root.right, node)
 
     def searchKey(self, root, key):
         if root is None:
@@ -57,6 +61,29 @@ class BinarySearchTree(object):
         self.inOrder(root.left)
         print(root.data)
         self.inOrder(root.right)
+
+    def findMin(self,root):
+        if root is None:
+            return -1
+        else:
+            if root.left is not None:
+                return self.findMin(root.left)
+            return root.data
+
+    def findMax(self, root):
+        if root is None:
+            return -1
+        else:
+            if root.right is not None:
+                return self.findMax(root.right)
+            return root.data
+
+    def findHeightTree(self, root):
+        if root is None:
+            return -1
+        else:
+            return max(self.findHeightTree(root.left),self.findHeightTree(root.right)) + 1
+
 
 BST = BinarySearchTree()
 node = BST.getNewNode(15)
@@ -81,3 +108,6 @@ node = BST.getNewNode(50)
 BST.insertNode(BST.root,node)
 print(BST.searchKey(BST.root, 50))
 BST.inOrder(BST.root)
+print(BST.findMin(BST.root))
+print((BST.findMax(BST.root)))
+print(BST.findHeightTree(BST.root))
