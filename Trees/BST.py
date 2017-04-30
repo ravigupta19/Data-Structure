@@ -85,14 +85,17 @@ class BST(object):
                 del root
                 return  tempNode
             else:
-                tempdata = self.getMin(root.right)
+                tempdata = self.getPredecessor(root.left)
                 root.data = data
                 self.deleteNode(root.right,tempdata)
                 return root
 
     def getPredecessor(self, root):
         if root.right:
-            return self.getPredecessor(root.left)
+            return self.getMin(root.right)
         return root
+
+    def getSucceesor(self, root):
+        pass
 
 
