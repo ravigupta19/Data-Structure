@@ -117,6 +117,11 @@ class BST(object):
             print(root.key)
             self.traverseInOrder(root.right)
 
+    def heightOfTree(self, root):
+        if root is None:
+            return -1
+        return max(self.heightOfTree(root.left), self.heightOfTree(root.right)) + 1
+
 tree = BST()
 tree.insert(15)
 tree.insert(6)
