@@ -10,7 +10,6 @@ class Heap(object):
         self.size = len(arr)
         self.heap = arr
         for i in range(self.size//2, -1,-1):
-            print(i)
             self.max_heapify(i)
 
     def swap(self,i, j):
