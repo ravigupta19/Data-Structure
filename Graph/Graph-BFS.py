@@ -18,7 +18,7 @@ class BreadthFirstSearch(object):
         queue.append(startNode)
         startNode.visited = True
         while queue:
-            actualNode = queue.pop()
+            actualNode = queue.pop(0)
             print(actualNode.name)
 
             for n in actualNode.neighbours:
