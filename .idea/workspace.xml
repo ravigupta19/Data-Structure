@@ -12,16 +12,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="binary-search-tree.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Trees/binary-search-tree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BST.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Trees/BST.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,11 +62,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Graph-BFS.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Graph-BFS.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Graph/Graph-BFS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="42" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="423">
+              <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graph-DFS.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Graph/Graph-DFS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="25" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,6 +149,7 @@
         <option value="$PROJECT_DIR$/Hashing/hash.py" />
         <option value="$PROJECT_DIR$/Trees/Red-black-tree.py" />
         <option value="$PROJECT_DIR$/Graph/Graph-BFS.py" />
+        <option value="$PROJECT_DIR$/Graph/Graph-DFS.py" />
       </list>
     </option>
   </component>
@@ -288,6 +289,20 @@
               <option name="myItemId" value="DataStructure" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Graph" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -312,7 +327,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Graph-BFS">
+  <component name="RunManager" selected="Python.Graph-DFS">
     <configuration default="false" name="AVL-Tree" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -326,24 +341,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DataStructure" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Trees/AVL-Tree.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="BST-Successor-Predecessor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Trees" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataStructure" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Trees/BST-Successor-Predecessor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -398,6 +395,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="DataStructure" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Graph/Graph-BFS.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Graph-DFS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Graph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataStructure" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Graph/Graph-DFS.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -488,18 +503,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.heap-array" />
       <item index="1" class="java.lang.String" itemvalue="Python.AVL-Tree" />
-      <item index="2" class="java.lang.String" itemvalue="Python.BST-Successor-Predecessor" />
-      <item index="3" class="java.lang.String" itemvalue="Python.heap-recursively" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Red-black-tree" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Graph-BFS" />
+      <item index="2" class="java.lang.String" itemvalue="Python.heap-recursively" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Red-black-tree" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Graph-BFS" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Graph-DFS" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Graph-BFS" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Red-black-tree" />
-        <item index="2" class="java.lang.String" itemvalue="Python.heap-recursively" />
-        <item index="3" class="java.lang.String" itemvalue="Python.AVL-Tree" />
-        <item index="4" class="java.lang.String" itemvalue="Python.BST-Successor-Predecessor" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Graph-DFS" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Graph-BFS" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Red-black-tree" />
+        <item index="3" class="java.lang.String" itemvalue="Python.heap-recursively" />
+        <item index="4" class="java.lang.String" itemvalue="Python.AVL-Tree" />
       </list>
     </recent_temporary>
   </component>
@@ -533,9 +548,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4346591" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34801137" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -578,13 +593,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Linked-List/singly-linked-list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Linked-List/doubly-linked-list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
@@ -944,8 +952,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph/Graph-BFS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="42" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="423">
+          <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph/Graph-DFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
