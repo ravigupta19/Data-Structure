@@ -129,7 +129,9 @@ class LinkedList(object):
     def printAllNode(self):
         current = self.head
         while current is not None:
-            print(current.getData())
+            print("Current Location " , current)
+            print("Current Next ",current.getNext())
+            print("Current Data ",current.getData())
             current = current.getNext()
 
 
@@ -170,20 +172,21 @@ newLinkedList.addNodeAtEnd(8)
 newLinkedList.addNodeAtEnd(0)
 newLinkedList.addNodeAtStart(10)
 newLinkedList.addNodeAtPosition(25,2)
-newLinkedList.addNodeAtPosition(23,3)
-newLinkedList.printAllNode()
-print('')
-newLinkedList.deleteNodeAtEnd()
-newLinkedList.printAllNode()
-print('')
+#newLinkedList.addNodeAtPosition(23,3)
+#newLinkedList.printAllNode()
+#print('')
+#newLinkedList.deleteNodeAtEnd()
+#newLinkedList.printAllNode()
+#print('')
 
-newLinkedList.deleteNodeAtStart()
-newLinkedList.printAllNode()
-print('')
+#newLinkedList.deleteNodeAtStart()
+#newLinkedList.printAllNode()
+#print('')
 
-newLinkedList.deleteNodeAtPosition(3)
-newLinkedList.printAllNode()
+#newLinkedList.deleteNodeAtPosition(3)
+#newLinkedList.printAllNode()
 
-newLinkedList.reverseLinkedList()
-print('')
+#newLinkedList.reverseLinkedList()
+#print('')
+#newLinkedList.printAllNode()
 newLinkedList.printAllNode()
