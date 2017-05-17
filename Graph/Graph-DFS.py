@@ -10,9 +10,8 @@ class Vertex(object):
 
 class Graph(object):
 
-    def __init__(self, n):
+    def __init__(self):
         self.vertices = {}
-        self.noOfVertices = n
 
     def addVertex(self, vertex):
         if isinstance(vertex, Vertex) and vertex not in self.vertices:
@@ -30,21 +29,32 @@ class Graph(object):
             if not vertex.visited:
                 self.DFS(vertex)
 
+    def TopologicalUtil(self, vertex, sorted):
+        if not vertex.visited:
+            vertex.visited = True
+
+        for v in vertex.neighbours:
+            if not v.visited:
+                self.TopologicalUtil(v,sorted)
+
+        sorted.append(vertex.name)
+
+
     def TopologicalSort(self):
-
-        visited = []
         sorted = []
+        for key in self.vertices.keys():
+            if not self.vertices[key].visited:
+                self.TopologicalUtil(self.vertices[key],sorted)
 
-        for key in self.vertices:
-            if
+        print(sorted)
 
 
 graph = Graph()
 graph = Graph()
-for i in range(ord("A"), ord("K")):
+for i in range(ord("A"), ord("I")):
     graph.addVertex(Vertex(chr(i)))
 
-edges = ['AB', 'AE', 'BF', 'CG', 'DE', 'DH', 'EH', 'FG', 'FI', 'FJ', 'GJ', 'HI']
+edges = ['AC', 'BC', 'BD', 'CE', 'DF', 'EH', 'EF', 'FG',]
 for edge in edges:
     graph.addEdge(edge[:1],edge[1:])
-graph.DFS(graph.vertices["A"])
+graph.TopologicalSort()
