@@ -6,55 +6,52 @@ class Node(object):
         self.rank = 0
 
 class DisjointSet(object):
-    listOfSet = {}
+
+    def __init__(self):
+        self.set = {}
 
     def makeSet(self, data):
         new_node = Node(data)
         new_node.parent = new_node
-        self.listOfSet[data] = new_node
+        self.set[data] = new_node
 
-    def union(self,data1, data2):
+    def union(self, data1, data2):
+        node1 = self.set[data1]
+        node2 = self.set[data2]
 
-        node1 = self.listOfSet[data1]
-        node2 = self.listOfSet[data2]
-
-        parent1 = self.findSet(node1)
-        parent2 = self.findSet(node2)
+        parent1 = self.findSetByCompersion(node1)
+        parent2 = self.findSetByCompersion(node2)
 
         if parent1.data == parent2.data:
             return
-        if parent1.rank >= parent2.rank:
-            parent1.rank = parent1.rank + 1 if parent1.rank == parent2.rank else parent1.rank
-            parent2.parent = parent1
         else:
-            parent1.parent = parent2
+            if parent1.rank >= parent2.rank:
+                parent2.parent = parent1
+                parent1.rank = parent1.rank + 1 if parent1.rank == parent2.rank else parent1.rank
+            else:
+                parent1.parent = parent2
 
-    def findSet(self,node):
+    def findSetByCompersion(self,node):
         if node.parent == node:
             return node
-        node.parent = self.findSet(node.parent)
-        return  node.parent
+        else:
+            node.parent = self.findSetByCompersion(node.parent)
+            return node.parent
 
-    def findSetData(self,data):
-        return self.findSet(self.listOfSet[data]).data
+    def findSet(self, data):
+        return self.findSetByCompersion(self.set[data]).data
 
 ds = DisjointSet()
-ds.makeSet(1)
-ds.makeSet(2)
-ds.makeSet(3)
-ds.makeSet(4)
-ds.makeSet(5)
-ds.makeSet(6)
-ds.makeSet(7)
+for i in range(1,8):
+    ds.makeSet(i)
 
-ds.union(1,2)
-ds.union(2,3)
-ds.union(4,5)
-ds.union(6,7)
-ds.union(5,6)
-ds.union(3,7)
+ds.union(1, 2)
+ds.union(2, 3)
+ds.union(4, 5)
+ds.union(6, 7)
+ds.union(5, 6)
+ds.union(3, 7)
 
-print(ds.findSetData(7))
+for key in ds.set.keys():
+    print(ds.findSet(key))
 
-
-print(ds.listOfSet)
