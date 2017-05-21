@@ -31,6 +31,7 @@ class DisjointSet(object):
             else:
                 parent1.parent = parent2
 
+
     def findSetByCompersion(self,node):
         if node.parent == node:
             return node
