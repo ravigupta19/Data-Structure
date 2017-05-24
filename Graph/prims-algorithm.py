@@ -1,5 +1,6 @@
 import heapq
 INF = 1000000
+
 class PriorityQueueMap(object):
     def __init__(self):
         self.eq = []
@@ -28,26 +29,38 @@ class PriorityQueueMap(object):
         del self.eq[index]
         heapq.heappush(self.eq,[priority, key])
 
-class Vertex(object):
+class Edge(object):
 
+    def __init__(self, vertex1, vertex2, weight ):
+        self.startingVertex = vertex1
+        self.endVertex = vertex2
+        self.weight = weight
+
+class Vertex(object):
     def __init__(self, data):
         self.name = data
         self.adjanceyList = []
         self.visited = False
+        self.edges = []
 
-    def addNeighbours(self,neighbour):
+    def addNeighbours(self,edge, neighbour):
         self.adjanceyList.append(neighbour)
+        self.edges.append(edge)
+
+    def getEdge(self):
+        return self.edges
 
 class Graph():
 
     def __init__(self):
         self.vertexList = {}
-        self.edgeList = []
+        self.edgeList = {}
 
     def addEdge(self,u,v,w):
-        self.edgeList.append([u,v,w])
-        self.vertexList[u].addNeighbours(v)
-        self.vertexList[v].addNeighbours(u)
+        edge = Edge(u,v,w)
+        self.edgeList[u+v] = edge
+        self.vertexList[u].addNeighbours(edge, v)
+        self.vertexList[v].addNeighbours(edge, u)
 
     def addVertex(self,data):
         self.vertexList[data] = Vertex(data)
@@ -55,28 +68,28 @@ class Graph():
     def PrimsAlgorithm(self, startVertex):
         resultEdge = []
         vertexEdge = {}
+
         queue = PriorityQueueMap()
         for key in self.vertexList.keys():
             queue.add(key)
         queue.descrease(startVertex, 0)
+        
         while len(queue.entry_finder) > 0:
             vertex = queue.getMin()
             if vertex in vertexEdge:
                 resultEdge.append(vertexEdge[vertex])
-            for neighbours in self.vertexList[vertex].adjanceyList:
-                
+            for edge in self.vertexList[vertex].edges:
+                adjacent = self.get_other_vertex_for_edge(vertex,edge)
+                if adjacent in queue.entry_finder and edge.weight <  queue.entry_finder[adjacent]:
+                    queue.descrease(adjacent, edge.weight)
+                    vertexEdge[adjacent] = edge.startingVertex + edge.endVertex
+        print(resultEdge)
 
-                
-
-
-
-
-
-        
-
-
-
-
+    def get_other_vertex_for_edge(self ,vertex, edge):
+        if edge.startingVertex == vertex:
+            return edge.endVertex
+        else:
+            return edge.startingVertex
 
 
 graph = Graph()
@@ -91,4 +104,6 @@ graph.addEdge("C","D",1)
 graph.addEdge("C","F",4)
 graph.addEdge("D","E",6)
 graph.addEdge("F","E",2)
+
 graph.PrimsAlgorithm("A")
+
