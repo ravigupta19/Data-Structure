@@ -1,95 +1,120 @@
+INF = 100000
 import heapq
-
-INF = 1000000
-
-
 class PriorityQueueMap(object):
+
     def __init__(self):
         self.eq = []
-        self.entry_finder = {}
+        self.eq_finder = {}
 
-    def add(self, key, prioprity=INF):
-        if key in self.entry_finder:
-            raise KeyError("Key already exists")
-        self.entry_finder[key] = prioprity
-        heapq.heappush(self.eq, [prioprity, key])
-
-    def delete(self, task):
-        if not task in self.entry_finder:
-            raise KeyError("Key doesnt exist")
-        self.entry_finder.pop(task)
+    def add(self, key, priority=INF):
+        self.eq_finder[key] = priority
+        heapq.heappush(self.eq, [priority,key])
 
     def getMin(self):
         minVertex = heapq.heappop(self.eq)[1]
-        self.entry_finder.pop(minVertex)
+        self.eq_finder.pop(minVertex)
         return minVertex
 
-    def descrease(self, key, priority):
-        previousPriority = self.entry_finder[key]
-        self.entry_finder[key] = priority
+    def decrease(self,key, priority):
+        previousPriority = self.eq_finder[key]
+        self.eq_finder[key] = priority
         index = self.eq.index([previousPriority, key])
         del self.eq[index]
-        heapq.heappush(self.eq, [priority, key])
-
+        heapq.heappush(self.eq,[priority,key])
 
 class Edge(object):
-    def __init__(self, vertex1, vertex2, weight):
-        self.startingVertex = vertex1
-        self.endVertex = vertex2
+
+    def __init__(self, startVertex, endVertex, weight):
+        self.startVertex = startVertex
+        self.endVertex = endVertex
         self.weight = weight
 
-
 class Vertex(object):
-    def __init__(self, data):
-        self.name = data
-        self.adjanceyList = []
+
+    def __init__(self,name):
+        self.name = name
+        self.neighbours = []
         self.visited = False
         self.edges = []
 
-    def addNeighbours(self, edge, neighbour):
-        self.adjanceyList.append(neighbour)
-        self.edges.append(edge)
-
-    def getEdge(self):
-        return self.edges
+    def addNeighbour(self,v):
+        self.neighbours.append(v)
 
 
-class Graph():
-    def __init__(self):
-        self.vertexList = {}
-        self.edgeList = {}
+class Graph(object):
+
+    def __init__(self, numVertex):
+        self.numberVertex = numVertex
+        self.vertexs = {}
+        self.edges = []
+
+    def addVertex(self, name):
+        vertex = Vertex(name)
+        self.vertexs[name] = vertex
 
     def addEdge(self, u, v, w):
-        edge = Edge(u, v, w)
-        self.edgeList[u + v] = edge
-        self.vertexList[u].addNeighbours(edge, v)
-        self.vertexList[v].addNeighbours(edge, u)
+        edge = Edge(u,v,w)
+        self.vertexs[u].addNeighbour(v)
+        self.vertexs[v].addNeighbour(u)
+        self.vertexs[u].edges.append(edge)
+        self.vertexs[v].edges.append(edge)
+        self.edges.append(edge)
 
-    def addVertex(self, data):
-        self.vertexList[data] = Vertex(data)
-
-    def PrimsAlgorithm(self, startVertex):
-        resultEdge = []
-        vertexEdge = {}
-
+    def DijkstraAlgorithm(self, sourceVertex = 0):
+        vertexParent = {}
+        vertexDistance = {}
         queue = PriorityQueueMap()
-        for key in self.vertexList.keys():
+        for key in self.vertexs.keys():
             queue.add(key)
-        queue.descrease(startVertex, 0)
+        queue.decrease(sourceVertex,0)
+        vertexParent[sourceVertex] = None
+        vertexDistance[sourceVertex] = 0
 
-        while len(queue.entry_finder) > 0:
-            vertex = queue.getMin()
-            if vertex in vertexEdge:
-                resultEdge.append(vertexEdge[vertex])
-            for edge in self.vertexList[vertex].edges:
-                adjacent = self.get_other_vertex_for_edge(vertex, edge)
-                if adjacent in queue.entry_finder and edge.weight < queue.entry_finder[adjacent]:
-                    queue.descrease(adjacent, edge.weight)
-                    vertexEdge[adjacent] = edge.startingVertex + edge.endVertex
-        print(resultEdge)
+        while len(queue.eq_finder) > 0:
+            currentVertex = queue.getMin()
+            print("CurrentVertex ",currentVertex)
+            for edge in self.vertexs[currentVertex].edges:
+                print("Start vertex", edge.startVertex)
+                print("End Vertex", edge.endVertex)
+                print("Weight ",edge.weight)
+                otherVertex = self.get_other_vertex_for_edge(currentVertex, edge)
+                if not otherVertex in queue.eq_finder:
+                    continue
+
+                new_distance = int(edge.weight) + int(vertexDistance[currentVertex])
+                if queue.eq_finder[otherVertex] > new_distance:
+                    vertexParent[otherVertex] = currentVertex
+                    vertexDistance[otherVertex] = new_distance
+                    queue.decrease(otherVertex, new_distance)
+        print(vertexParent)
+        print(vertexDistance)
 
     def get_other_vertex_for_edge(self, vertex, edge):
-        if edge.startingVertex == vertex:
+        if edge.startVertex == vertex:
             return edge.endVertex
         else:
-            return edge.startingVertex
+            return edge.startVertex
+
+graph = Graph(9)
+for i in range(graph.numberVertex):
+    graph.addVertex(i)
+graph.addEdge(0,1,4)
+graph.addEdge(0,7,8)
+graph.addEdge(1,2,8)
+graph.addEdge(1,7,11)
+graph.addEdge(2,3,7)
+graph.addEdge(2,8,2)
+graph.addEdge(2,5,4)
+graph.addEdge(3,4,9)
+graph.addEdge(3,5,14)
+graph.addEdge(4,5,10)
+graph.addEdge(5,6,2)
+graph.addEdge(6,7,1)
+graph.addEdge(6,8,6)
+graph.addEdge(7,8,7)
+
+graph.DijkstraAlgorithm()
+
+
+
+
