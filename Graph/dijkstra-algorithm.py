@@ -87,7 +87,7 @@ class Graph(object):
                     vertexDistance[otherVertex] = new_distance
                     queue.decrease(otherVertex, new_distance)
         print(vertexParent)
-        print(vertexDistance)
+        print(sorted(vertexDistance.items(), key=lambda s: s[0]))
 
     def get_other_vertex_for_edge(self, vertex, edge):
         if edge.startVertex == vertex:
