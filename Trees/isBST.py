@@ -92,6 +92,5 @@ BST.addData(25)
 BST.addData(60)
 BST.addData(28)
 BST.addData(78)
-#BST.getLowestCommonAncestor(28,78,BST.root)
 print(BST.checkBST())
 '''
